@@ -1,8 +1,8 @@
 {
   "name": "@faviator/faviator-svg",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simple easy favicon generator.",
-  "main": "index.js",
+  "main": "createSvgFavicon.js",
   "scripts": {
     "preversion": "git checkout master && git merge --squash dev && npm test",
     "version": "git add -A",
