@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/faviator/faviator-svg.git"
+    "url": "git+ssh://git@github.com/faviator/create-svg-favicon.git"
   },
   "keywords": [
     "faviator",
@@ -31,9 +31,9 @@
   "author": "Jason Yu <me@ycmjason.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/faviator/faviator-svg/issues"
+    "url": "https://github.com/faviator/create-svg-favicon/issues"
   },
-  "homepage": "https://github.com/faviator/faviator-svg#readme",
+  "homepage": "https://github.com/faviator/create-svg-favicon#readme",
   "devDependencies": {
     "@ycm.jason/eslint-config": "^1.0.0",
     "codecov": "^3.0.0",
