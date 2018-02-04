@@ -4,6 +4,10 @@ const createSvgFavicon = require('../createSvgFavicon');
 const removeNewLines = (s) => s.replace(/(\r|\n)/g, '');
 
 describe('createSvgFavicon', function() {
+  it('should export default as well for es6', function() {
+    assert.equal(createSvgFavicon.default, createSvgFavicon);
+  });
+
   it('should generate the doctype tag', function() {
     assert((/<!doctype svg/i).test(createSvgFavicon()));
   });

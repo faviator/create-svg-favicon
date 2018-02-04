@@ -1,4 +1,4 @@
-module.exports = ({
+const createSvgFavicon = ({
   size = 16,
   text = 'F',
   dx = 0,
@@ -51,3 +51,6 @@ module.exports = ({
   stroke="${borderColor}"
   stroke-width="${borderWidth}"></rect>
 </svg>`;
+
+module.exports = createSvgFavicon;
+module.exports.default = createSvgFavicon;
