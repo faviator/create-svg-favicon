@@ -37,7 +37,7 @@ const createSvgFavicon = ({
   font-size="${fontSize}"
   font-family="${fontFamily}"
   text-anchor="middle"
-  alignment-baseline="central">${text}</text>
+  dominant-baseline="central">${text}</text>
 
 <rect x="${parseFloat(borderWidth) / 2}"
   y="${parseFloat(borderWidth) / 2}"

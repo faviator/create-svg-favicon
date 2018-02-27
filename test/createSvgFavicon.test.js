@@ -5,8 +5,6 @@ const createSvgFavicon = require('../createSvgFavicon');
 
 const assertFavicon = (svg) => {
   svg = svg.replace(/(\r|\n)/g, '');
-  assert.equal(svg.match(new RegExp(`<text [^>]*?text-anchor="([^"]*)"`, 'i'))[1], 'middle');
-  assert.equal(svg.match(new RegExp(`<text [^>]*?alignment-baseline="([^"]*)"`, 'i'))[1], 'central');
   return {
     size(size) {
       assert.equal(svg.match(/<svg [^>]*?height="([^"]*)"/i)[1], String(size));
@@ -16,6 +14,8 @@ const assertFavicon = (svg) => {
 
     text(text) {
       assert.equal(svg.match(new RegExp(`<text.*?>([^<]*)</text>`, 'i'))[1], String(text));
+      assert.equal(svg.match(new RegExp(`<text [^>]*?text-anchor="([^"]*)"`, 'i'))[1], 'middle');
+      assert.equal(svg.match(new RegExp(`<text [^>]*?dominant-baseline="([^"]*)"`, 'i'))[1], 'central');
       return this;
     },
 

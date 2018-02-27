@@ -14,6 +14,7 @@
     "test:watch": "mocha --recursive --watch",
     "coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
     "lint:js": "eslint .",
+    "generateFaviatorIcon": "node scripts/generateFaviatorIcon > /tmp/faviator_test.svg",
     "\n# HUSKY GIT HOOKS:": "",
     "precommit": "lint-staged"
   },
