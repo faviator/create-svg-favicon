@@ -1,6 +1,6 @@
 {
   "name": "@faviator/create-svg-favicon",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The SVG favicon generation library for faviator.",
   "main": "createSvgFavicon.js",
   "scripts": {
