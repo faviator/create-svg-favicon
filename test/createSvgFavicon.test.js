@@ -44,6 +44,11 @@ const assertFavicon = (svg) => {
       return this;
     },
 
+    fontWeight(fontWeight) {
+      assert.equal(svg.match(new RegExp(`<text [^>]*?font-weight="([^"]*)"`, 'i'))[1], String(fontFamily));
+      return this;
+    },
+
     backgroundColor(backgroundColor) {
       assert.equal(svg.match(new RegExp(`<rect [^>]*?fill="([^"]*)"`, 'i'))[1], String(backgroundColor));
       return this;
@@ -132,22 +137,25 @@ describe('createSvgFavicon', function() {
     assertFavicon(svg).borderRadius(borderRadius);
   });
 
-  it('should generate a text tag with content text, fill, font-family, font-size', function() {
+  it('should generate a text tag with content text, fill, font-family, font-size, font-weight', function() {
     const text = 'love';
     const fontColor = 'red';
     const fontFamily = 'Open Sans';
     const fontSize = 65;
+    const fontWeight = 400;
     const svg = createSvgFavicon({
       text,
       fontColor,
       fontFamily,
       fontSize,
+      fontWeight,
     });
     assertFavicon(svg)
       .text(text)
       .fontColor(fontColor)
       .fontFamily(fontFamily)
-      .fontSize(fontSize);
+      .fontSize(fontSize)
+      .fontWeight(fontWeight);
   });
 
   it('should generate a text tag with at center', function() {

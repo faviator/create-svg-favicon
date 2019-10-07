@@ -6,6 +6,7 @@ const createSvgFavicon = ({
   fontSize = 0,
   fontFamily = '',
   fontColor = '',
+  fontWeight = '',
   backgroundColor = '',
   borderWidth = 0,
   borderColor = '',
@@ -17,7 +18,7 @@ const createSvgFavicon = ({
 <svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 100 100">
   <defs>
     <style type="text/css">
-      @import url('https://fonts.googleapis.com/css?family=${fontFamily.replace(/ /g, '+')}');
+      @import url('https://fonts.googleapis.com/css?family=${fontFamily.replace(/ /g, '+')}${fontWeight && ':' + fontWeight}');
     </style>
   </defs>
 
@@ -36,6 +37,7 @@ const createSvgFavicon = ({
   fill="${fontColor}"
   font-size="${fontSize}"
   font-family="${fontFamily}"
+  font-weight="${fontWeight}"
   text-anchor="middle"
   dominant-baseline="central">${text}</text>
 
