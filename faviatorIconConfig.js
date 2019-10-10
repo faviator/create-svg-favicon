@@ -6,6 +6,7 @@ module.exports = {
   fontSize: 70,
   fontFamily: 'Dancing Script',
   fontColor: '#ffffff',
+  fontWeight: '400',
   backgroundColor: '#f5beb7',
   borderWidth: 3.5,
   borderColor: '#feeeec',
