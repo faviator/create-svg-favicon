@@ -39,13 +39,14 @@ const assertFavicon = (svg) => {
       return this;
     },
 
-    fontColor(fontColor) {
-      assert.equal(svg.match(new RegExp(`<text [^>]*?fill="([^"]*)"`, 'i'))[1], String(fontColor));
+    fontWeight(fontFamily) {
+      assert.equal(svg.match(new RegExp(`<text [^>]*?font-weight="([^"]*)"`, 'i'))[1], String(fontFamily));
       return this;
     },
 
-    fontWeight(fontWeight) {
-      assert.equal(svg.match(new RegExp(`<text [^>]*?font-weight="([^"]*)"`, 'i'))[1], String(fontFamily));
+
+    fontColor(fontColor) {
+      assert.equal(svg.match(new RegExp(`<text [^>]*?fill="([^"]*)"`, 'i'))[1], String(fontColor));
       return this;
     },
 
@@ -142,7 +143,7 @@ describe('createSvgFavicon', function() {
     const fontColor = 'red';
     const fontFamily = 'Open Sans';
     const fontSize = 65;
-    const fontWeight = 400;
+    const fontWeight = '700';
     const svg = createSvgFavicon({
       text,
       fontColor,
