@@ -1,7 +1,5 @@
 # Changelog
 
-## 1.2.3
+## 1.2.0
+- Add support for font weight
 
-### Chore
-- Updated release pipeline, drop `dev` branch
-- Bump dependencies
