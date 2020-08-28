@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.1
+- bump deps
+
 ## 1.3.0
 - Add typescript support
 
